@@ -1,22 +1,23 @@
-import React, { Component } from 'react'
+import React from 'react'
 import ProteinForm from './ProteinForm'
 import FillingForm from './FillingForm'
 import ToppingForm from './ToppingForm'
-import SideForm from './SideForm'
+import SideForm from  './SideForm'
 
 const DEFAULT_STATE = {
-  protein: [],
-  fillings: [],
+  protein: ['Barbacoa'],
+  fillings: ['Fajita Veggies'],
   toppings: [],
   sides: []
 }
 
-class Form extends Component {
+class Form extends React.Component {
+  
   state = {
     ...DEFAULT_STATE
   }
 
-  handleSubmit() {
+  handleSubmit(event) {
     event.preventDefault()
     document.getElementById("order-form").reset()
     this.props.addOrder(this.state)
@@ -26,7 +27,8 @@ class Form extends Component {
     })
   }
 
-  handleChange() {
+  handleChange(event) {
+    // event.preventDefault()
     const itemType = event.target.name
     const item = event.target.value
 
@@ -40,6 +42,7 @@ class Form extends Component {
           ingr => ingr !== item
         )
       })
+
   }
 
   render() {
