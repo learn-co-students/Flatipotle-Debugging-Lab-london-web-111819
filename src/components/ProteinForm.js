@@ -14,7 +14,7 @@ const ProteinForm = props => {
                             type="checkbox"
                             value="Barbacoa"
                             name="protein"
-                            checked={props.protein.includes("Barbacoa")}
+                            defaultChecked={props.protein.includes("Barbacoa")}
                             onChange={props.handleChange}
                         />
                         <img
@@ -34,7 +34,7 @@ const ProteinForm = props => {
                             type="checkbox"
                             value="Steak"
                             name="protein"
-                            checked={props.protein.includes("Steak")}
+                            defaultChecked={props.protein.includes("Steak")}
                             onChange={props.handleChange}
                         />
                         <img
@@ -54,7 +54,7 @@ const ProteinForm = props => {
                             type="checkbox"
                             value="Chicken"
                             name="protein"
-                            checked={props.protein.includes("Chicken")}
+                            defaultChecked={props.protein.includes("Chicken")}
                             onChange={props.handleChange}
                         />
                         <img
@@ -74,7 +74,7 @@ const ProteinForm = props => {
                             type="checkbox"
                             value="Carnitas"
                             name="protein"
-                            checked={props.protein.includes("Carnitas")}
+                            defaultChecked={props.protein.includes("Carnitas")}
                             onChange={props.handleChange}
                         />
                         <img
@@ -94,7 +94,7 @@ const ProteinForm = props => {
                             type="checkbox"
                             value="Sofritas"
                             name="protein"
-                            checked={props.protein.includes("Sofritas")}
+                            defaultChecked={props.protein.includes("Sofritas")}
                             onChange={props.handleChange}
                         />
                         <img

@@ -16,6 +16,8 @@ class App extends Component {
 
     render() {
         return (
+
+            
             <div className="App">
                 <header className="App-header">
                     <img
@@ -25,13 +27,13 @@ class App extends Component {
                     />
                 </header>
 
-                <Form />
+                <Form addOrder={this.addOrder}/>
 
                 <div className="ui raised container segment">
                     <h1 className="ui block header">All Orders</h1>
                     <div className="ui three cards">
                         {this.state.orders.map((order, idx) => (
-                            <Order key={idx} {...order} />
+                            <Order key={idx} order={{...order}} />
                         ))}
                     </div>
                 </div>
